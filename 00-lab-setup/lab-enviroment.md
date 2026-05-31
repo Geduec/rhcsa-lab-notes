@@ -10,7 +10,7 @@
 - Disk: 30 GB
 
 ### Client
-- Hostname: cliente.example.com
+- Hostname: client.example.com
 - Software Selection: Workstation
 - RAM: 4096 MB
 - vCPU: 2
@@ -33,7 +33,7 @@
 
 Connectivity verified using ping between both hosts.
 
-![Connectivity test](../rhcsa-lab-notes/00-lab-setup/img/ping_servera&client.png)
+![Connectivity test](./img/ping_servera&client.png)
 
 ## Lessons Learned
 

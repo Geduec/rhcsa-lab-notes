@@ -16,7 +16,7 @@ Set up a RHEL 9 virtual machine for RHCSA practice.
 4. Selected "Server" installation type
 5. Set up root & user account and password
 6. Configured network settings (DHCP)
-7. hostname set to student.example.com
+7. hostname set to server.example.com
 8. Completed installation and rebooted 
 
 ## Notes
