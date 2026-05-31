@@ -46,3 +46,7 @@ sudo nmcli con mod enp0s3 ipv4.addresses 192.168.26.X/24
 sudo nmcli con mod enp0s3 ipv4.method manual
 sudo nmcli con up enp0s3
 ```
+
+## Issues
+
+- None

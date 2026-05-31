@@ -104,7 +104,7 @@ getent hosts client.example.com
 
 ---
 
-## Key Learnings
+## Lessons Learned
 
 * `hostnamectl` is the correct tool to manage hostnames in RHEL 10.
 * Hostname changes do not automatically update `/etc/hosts`.
@@ -116,3 +116,7 @@ getent hosts client.example.com
 ## Notes
 
 This setup simulates a basic internal network environment commonly used in RHCSA practice labs.
+
+## Issues
+
+- None
