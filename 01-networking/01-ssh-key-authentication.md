@@ -60,6 +60,8 @@ ssh student@server.example.com
 * User is `student`
 * Host is `server.example.com`
 
+![SSH Key Authentication](./img/ssh%20ping%20and%20key.png)
+
 ---
 
 ## Lessons Learned
@@ -70,5 +72,5 @@ ssh student@server.example.com
 
 ## Issues
 
-- None
+* None
 

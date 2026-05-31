@@ -49,4 +49,4 @@ sudo nmcli con up enp0s3
 
 ## Issues
 
-- None
+* None

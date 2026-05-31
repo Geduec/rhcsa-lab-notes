@@ -29,4 +29,4 @@ Set up a RHEL 9 virtual machine for RHCSA practice.
 
 ## Issues
 
-- None 
+* None 
