@@ -14,17 +14,53 @@ Configure passwordless SSH authentication between client and server using SSH ke
 
 ---
 
+## SSH Authentication Methods
+
+SSH connections require:
+
+1. A destination host (hostname or IP address).
+2. A valid user account on the remote system.
+3. An authentication method.
+
+Common connection examples:
+
+```bash
+ssh student@server.example.com
+```
+
+Connect using hostname.
+
+```bash
+ssh student@192.168.26.10
+```
+
+Connect using IP address.
+
+```bash
+ssh 192.168.26.10
+```
+
+Uses the current local username.
+
+SSH supports two common authentication methods:
+
+- Password Authentication
+- Public Key Authentication (SSH Keys)
+
+
+---
+
 ## Steps
 
 ### 1. Verify SSH service on server
 
-```bash id="sshdoc2"
+```bash"
 sudo systemctl status sshd
 ```
 
 Enable if needed:
 
-```bash id="sshdoc3"
+```bash"
 sudo systemctl enable --now sshd
 ```
 
@@ -32,7 +68,7 @@ sudo systemctl enable --now sshd
 
 ### 2. Generate SSH key (client)
 
-```bash id="sshdoc4"
+```bash"
 ssh-keygen
 ```
 
@@ -40,7 +76,7 @@ ssh-keygen
 
 ### 3. Copy public key to server
 
-```bash id="sshdoc5"
+```bash"
 ssh-copy-id student@server.example.com
 ```
 
@@ -48,8 +84,30 @@ ssh-copy-id student@server.example.com
 
 ### 4. Test SSH connection
 
-```bash id="sshdoc6"
+```bash"
 ssh student@server.example.com
+```
+
+---
+
+### 5. Verify SSH Sessions
+
+Display connected users:
+
+```bash
+who
+```
+
+Display active SSH connections:
+
+```bash
+ss -tnp | grep sshd
+```
+
+View SSH service logs:
+
+```bash
+journalctl -u sshd
 ```
 
 ---
@@ -66,11 +124,13 @@ ssh student@server.example.com
 
 ## Lessons Learned
 
-* SSH key authentication improves security and automation.
-* Public key is stored in `~/.ssh/authorized_keys` on server.
-* Password authentication is no longer required after setup.
+* SSH connections require a destination host, specified by hostname or IP address.
+* Hostnames are resolved using DNS or `/etc/hosts`.
+* Public key authentication improves security and automation.
+* Public keys are stored in `~/.ssh/authorized_keys` on the server.
+* Private keys remain on the client and must never be shared.
+* SSH key authentication removes the need to enter a password for each connection.
 
 ## Issues
 
 * None
-
